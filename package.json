@@ -1,0 +1,12 @@
+{
+  "name": "ar-shooter",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "yarn serve"
+  },
+  "devDependencies": {
+    "serve": "^11.3.0"
+  }
+}

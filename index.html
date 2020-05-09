@@ -129,17 +129,23 @@
               proxy-event__startenemies="event: die; to: .enemy; as: run"
               proxy-event__playmusic="event: die; to: #music; as: playmusic"></a-entity>
 
-    <a-camera shooter="bullets: normal; activeBulletType: normal" click-to-shoot>
+    <a-camera>
       <a-entity
         id="gun"
-        position="0 -0.06 -0.4"
-        rotation="0 11 0"
-        scale="0.5 0.5 0.5"
-        proxy-event__shoot="event: triggerdown; to: #gunLeft; as: shoot"
-        proxy-event__shootsound="event: triggerdown; to: #soundShootLeft; as: shoot"
-        shooter="bullets: normal; activeBulletType: normal">
-        <a-entity supercraft-thing="from: #supercraftThings; name: thing30; resetOrigin: true; ignorePosition: true" rotation="0 5 0" position="0 0 -0.03"></a-entity>
-        <a-entity id="soundShootLeft" sound="src: #soundShoot; poolSize: 10; on: shoot; volume: 0.6"></a-entity>
+        position="0.1 -0.06 -0.4"
+        rotation="0 20 0"
+        scale="0.6 0.6 0.6"
+        supercraft-thing="from: #supercraftThings; name: thing30; resetOrigin: true; ignorePosition: true"
+      ></a-entity>
+      <a-entity
+        id="gunBarrel"
+        position="0.15 -0.15 -0.4"
+        rotation="0 2.5 0"
+        shooter="bullets: normal; activeBulletType: normal"
+        proxy-event__shootsound="event: mousedown; to: #soundShootGun; as: shoot"
+        cursor
+        click-to-shoot>
+        <a-entity id="soundShootGun" sound="src: #soundShoot; poolSize: 10; on: shoot; volume: 0.6"></a-entity>
       </a-entity>
     </a-camera>
   </a-scene>

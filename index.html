@@ -25,14 +25,14 @@
     arjs="sourceType: webcam; debugUIEnabled: false;"
   >
     <a-assets>
-      <a-asset-item id="soundSong" src="sounds/song.ogg" response-type="arraybuffer"></a-asset-item>
-      <a-asset-item id="soundEnemy1a" src="sounds/enemy1a.ogg" response-type="arraybuffer"></a-asset-item>
-      <a-asset-item id="soundEnemy1b" src="sounds/enemy1b.ogg" response-type="arraybuffer"></a-asset-item>
-      <a-asset-item id="soundEnemy1c" src="sounds/enemy1c.ogg" response-type="arraybuffer"></a-asset-item>
-      <a-asset-item id="soundEnemy2" src="sounds/enemy2.ogg" response-type="arraybuffer"></a-asset-item>
-      <a-asset-item id="soundEnemy3" src="sounds/enemy3.ogg" response-type="arraybuffer"></a-asset-item>
-      <a-asset-item id="soundExplosion" src="sounds/explosion.ogg" response-type="arraybuffer"></a-asset-item>
-      <a-asset-item id="soundShoot" src="sounds/shoot.ogg" response-type="arraybuffer"></a-asset-item>
+      <audio id="soundSong" src="sounds/song.mp3"></audio>
+      <audio id="soundEnemy1a" src="sounds/enemy1a.mp3"></audio>
+      <audio id="soundEnemy1b" src="sounds/enemy1b.mp3"></audio>
+      <audio id="soundEnemy1c" src="sounds/enemy1c.mp3"></audio>
+      <audio id="soundEnemy2" src="sounds/enemy2.mp3"></audio>
+      <audio id="soundEnemy3" src="sounds/enemy3.mp3"></audio>
+      <audio id="soundExplosion" src="sounds/explosion.mp3"></audio>
+      <audio id="soundShoot" src="sounds/shoot.mp3"></audio>  
     </a-assets>
 
     <!-- Theme song, starts on `playmusic` game start event. -->
@@ -133,7 +133,7 @@
       <a-entity
         id="gun"
         position="0 -0.06 -0.4"
-        rotation="0 -16 0"
+        rotation="0 11 0"
         scale="0.5 0.5 0.5"
         proxy-event__shoot="event: triggerdown; to: #gunLeft; as: shoot"
         proxy-event__shootsound="event: triggerdown; to: #soundShootLeft; as: shoot"
